@@ -1,0 +1,1 @@
+{"root":["./src/main.ts","./src/vite-env.d.ts","./src/router/index.ts","./src/stores/ipstore.ts","./src/app.vue","./src/components/ipdetail.vue","./src/components/iptable.vue","./src/components/ipsinput.vue"],"version":"5.6.3"}
