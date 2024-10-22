@@ -1,36 +1,39 @@
-import { defineStore } from 'pinia';
+import { defineStore } from 'pinia'
 
-interface IpData {
-  query: string;
-  status: string;
-  country: string;
-  regionName: string;
-  city: string;
-  zip: string;
-  lat: number;
-  lon: number;
-  isp: string;
-  org: string;
-  as: string;
+export interface IIpData {
+  status:string,
+  country: string,
+  countryCode: string,
+  region: string,
+  regionName: string,
+  city: string,
+  zip: string,
+  lat: number,
+  lon: number,
+  timezone: string,
+  isp: string,
+  org: string,
+  as: string,
+  query: string
 }
 
 export const useIpStore = defineStore('ipStore', {
   state: () => ({
-    ipList: [] as IpData[],
+    ipList: [] as IIpData[],
     searchQuery: '',
   }),
   actions: {
-    setIpList(list: IpData[]) {
-      this.ipList = list;
+    setIpList(list: IIpData[]) {
+      this.ipList = list
     },
     setSearchQuery(query: string) {
-      this.searchQuery = query;
+      this.searchQuery = query
     },
     clearIpList() {
-      this.ipList = [];
+      this.ipList = []
     },
     removeIp(index: number) {
-      this.ipList.splice(index, 1);
+      this.ipList.splice(index, 1)
     },
   },
-});
+})
